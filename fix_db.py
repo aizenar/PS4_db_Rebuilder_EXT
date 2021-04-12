@@ -13,9 +13,13 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("PS4_IP", help="PS4 ftp ip address")
 parser.add_argument('--fw', default="6.72", help='currently support 5.05, 6.72')
+parser.add_argument('--port', default="2121", help='PS4 FTP Port Number')
 args = parser.parse_args()
 app_db = "tmp/app.db"
 PS4_IP = args.PS4_IP
+
+port = 2121
+port = args.port
 
 value_format = ""
 if(args.fw == "5.05"):
@@ -61,7 +65,7 @@ def get_game_info_by_id(GameID) :
 
 
 ftp = FTP()
-ftp.connect(PS4_IP, 1337, timeout=30)
+ftp.connect(PS4_IP, port, timeout=30)
 ftp.login(user='username', passwd = 'password')
 if(len(files) == 0) :
 	ftp.cwd('/user/app/')
