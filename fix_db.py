@@ -22,8 +22,6 @@ PS4_IP = args.PS4_IP
 port = 2121
 port = int(args.port)
 
-print (port)
-
 value_format = ""
 if(args.fw == "5.05"):
         value_format = """("%s", "%s", "%s", "/user/appmeta/%s", "2018-07-27 15:06:46.822", "0", "0", "5", "1", "100", "0", "151", "5", "1", "gd", "0", "0", "0", "0", NULL, NULL, NULL, "%d", "2018-07-27 15:06:46.802", "0", "game", NULL, "0", "0", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "0", NULL, NULL, NULL, NULL, NULL, "0", "0", NULL, "2018-07-27 15:06:46.757")"""
@@ -44,10 +42,9 @@ info = {}
 files = []
 
 def sort_files(file) :
-        print (file)
         if re.search("^[A-Z]", file[-9]):
                 files.append("'%s'" % file[-9:])
-                print (file)
+
 def get_game_info_by_id(GameID) :
         if(GameID not in info) :
                 info[GameID] = CUSA()
