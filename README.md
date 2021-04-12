@@ -15,7 +15,7 @@ Ps4 built-in database rebuilder has the tendency to remove fpkg from the databas
 	| Version | Command |
 	|--|--|
 	| 5.05 | `python3 fix_db.py [PS4_IP] --port [PS4_FTP_PORT] --fw 5.05` |
-	| 6.72 | `python3 fix_db.py [PS4_IP] --port [PS4_FTP_PORT]` |
+	| 6.72 - 7.02 | `python3 fix_db.py [PS4_IP] --port [PS4_FTP_PORT]` |
 
 4) Wait for the script to finish, then logout of the PS4 user without closing the browser
 
