@@ -37,7 +37,7 @@ info = {}
 files = []
 
 def sort_files(file) :
-	if("CUSA" in file) :
+	if re.search("^[A-Z]", file):
 		files.append("'%s'" % file[-9:])
 
 def get_game_info_by_id(GameID) :
@@ -108,7 +108,7 @@ print('')
 
 print("Processing table: tbl_appinfo")
 
-cursor.execute("SELECT DISTINCT T.titleid FROM (SELECT titleid FROM %s) T WHERE T.titleid LIKE 'CUSA%%' AND T.titleid NOT IN (SELECT DISTINCT titleid FROM tbl_appinfo);" % (" UNION SELECT titleid FROM ".join(tbl_appbrowse)))
+cursor.execute("SELECT DISTINCT T.titleid FROM (SELECT titleid FROM %s) T WHERE T.titleid NOT IN (SELECT DISTINCT titleid FROM tbl_appinfo);" % (" UNION SELECT titleid FROM ".join(tbl_appbrowse)))
 missing_appinfo_cusa_id = cursor.fetchall()
 for tmp_cusa_id in missing_appinfo_cusa_id :
 	game_id = tmp_cusa_id[0]
