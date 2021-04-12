@@ -1,4 +1,4 @@
-# PS4_db_Rebuilder_EX
+# PS4_db_Rebuilder_EXT
 
 Ps4 built-in database rebuilder has the tendency to remove fpkg from the database. This will repopulate the database with them!
 
