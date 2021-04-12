@@ -2,6 +2,8 @@
 
 Ps4 built-in database rebuilder has the tendency to remove fpkg from the database. This will repopulate the database with them!
 
+This repository is based on the Zer0xFF repository (https://github.com/Zer0xFF/PS4_db_rebuilder) but with the improvement that it now processes all games and homebrews (RetroArch, Ps4-Xplorer, PS2 games, ...).
+
 ## Requirement
 
 - Python (preferably 3.0+)
