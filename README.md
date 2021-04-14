@@ -10,7 +10,7 @@ This repository is a modification of the Zer0xFF repository (https://github.com/
 
 ## Instructions
 
-1) Recursively clone (`git clone <url> --recursive`)  this repo or downdload a release (https://github.com/aizenar/PS4_db_Rebuilder_EXT/releases/download/v0.1/PS4_db_Rebuilder_EXT-0.1.zip)
+1) Recursively clone (`git clone <url> --recursive`)  this repo or download a release (https://github.com/aizenar/PS4_db_Rebuilder_EXT/releases/download/v0.1/PS4_db_Rebuilder_EXT-0.1.zip)
 2) Start FTP server on the PS4
 3) Run the python script through terminal/cmdline:
 	
